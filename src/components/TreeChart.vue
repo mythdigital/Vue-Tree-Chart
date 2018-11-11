@@ -5,13 +5,13 @@
           <div :class="{node: true, hasMate: treeData.mate}">
             <div class="person" @click="$emit('click-node', treeData)">
               <div class="avat">
-                <img :src="treeData.image_url" />
+                {{treeData.avatar_initials}}
               </div>
               <div class="name">{{treeData.name}}</div>
             </div>
             <div class="person" v-if="treeData.mate" @click="$emit('click-node', treeData.mate)">
               <div class="avat">
-                <img :src="treeData.mate.image_url" />
+                {{treeData.avatar_initials}}
               </div>
               <div class="name">{{treeData.mate.name}}</div>
             </div>
